@@ -1,11 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Noticias Tecnológicas - TechNews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .news-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-content {
+            padding: 20px;
+        }
+        .news-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .news-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .news-summary {
+            color: #444;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .news-source {
+            color: #667eea;
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease;
+        }
+        .news-source:hover {
+            border-bottom: 2px solid #667eea;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>🚀 TechNews</h1>
+        <p>Las últimas noticias del mundo tecnológico</p>
+    </header>
+
+    <div class="container">
+        <div class="news-grid">
+            <!-- Noticia 1 -->
+            <article class="news-card">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Inteligencia Artificial" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">OpenAI lanza GPT-4 Turbo con capacidades mejoradas de razonamiento</h2>
+                    <p class="news-date">📅 4 de septiembre, 2025</p>
+                    <p class="news-summary">
+                        La nueva versión de GPT-4 Turbo incluye mejoras significativas en el razonamiento matemático y científico, 
+                        además de una reducción del 50% en los costos de uso. La actualización también incorpora capacidades 
+                        multimodales avanzadas que permiten procesar texto, imágenes y audio de manera más eficiente.
+                    </p>
+                    <a href="https://openai.com" class="news-source">🔗 OpenAI Official</a>
+                </div>
+            </article>
+
+            <!-- Noticia 2 -->
+            <article class="news-card">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Apple iPhone" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Apple presenta el iPhone 16 con chip A18 y nuevas funciones de IA</h2>
+                    <p class="news-date">📅 3 de septiembre, 2025</p>
+                    <p class="news-summary">
+                        El nuevo iPhone 16 incluye el revolucionario chip A18 fabricado en proceso de 3nm, ofreciendo un 40% 
+                        más de rendimiento y 30% menos consumo energético. Las nuevas características de Apple Intelligence 
+                        permiten funciones de asistente personal más avanzadas y procesamiento de lenguaje natural en el dispositivo.
+                    </p>
+                    <a href="https://apple.com" class="news-source">🔗 Apple Newsroom</a>
+                </div>
+            </article>
+
+            <!-- Noticia 3 -->
+            <article class="news-card">
+                <img src="https://images.unsplash.com/photo-1640552435388-a54879e72b28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="SpaceX Starship" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">SpaceX completa exitosamente la primera misión lunar comercial con Starship</h2>
+                    <p class="news-date">📅 2 de septiembre, 2025</p>
+                    <p class="news-summary">
+                        La nave Starship de SpaceX ha completado con éxito su primera misión comercial a la Luna, transportando 
+                        satélites y equipo científico para múltiples clientes internacionales. Esta misión marca un hito 
+                        importante en la comercialización del espacio y reduce significativamente los costos de acceso lunar.
+                    </p>
+                    <a href="https://spacex.com" class="news-source">🔗 SpaceX Official</a>
+                </div>
+            </article>
+
+            <!-- Noticia 4 -->
+            <article class="news-card">
+                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Computación Cuántica" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Google alcanza la supremacía cuántica práctica con su nuevo procesador Willow</h2>
+                    <p class="news-date">📅 1 de septiembre, 2025</p>
+                    <p class="news-summary">
+                        El nuevo procesador cuántico Willow de Google ha demostrado capacidades de corrección de errores 
+                        cuánticos sin precedentes, acercando la computación cuántica a aplicaciones prácticas. El sistema 
+                        puede resolver problemas específicos millones de veces más rápido que las supercomputadoras actuales.
+                    </p>
+                    <a href="https://research.google.com" class="news-source">🔗 Google Research</a>
+                </div>
+            </article>
+
+            <!-- Noticia 5 -->
+            <article class="news-card">
+                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="React Framework" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Meta lanza React 19 con Server Components y nuevas optimizaciones</h2>
+                    <p class="news-date">📅 31 de agosto, 2025</p>
+                    <p class="news-summary">
+                        React 19 introduce Server Components estables, un nuevo compilador automático y mejoras significativas 
+                        en el rendimiento. La nueva versión promete aplicaciones web más rápidas y una mejor experiencia de 
+                        desarrollo con menos código boilerplate y optimizaciones automáticas.
+                    </p>
+                    <a href="https://react.dev" class="news-source">🔗 React Official Blog</a>
+                </div>
+            </article>
+
+            <!-- Noticia 6 -->
+            <article class="news-card">
+                <img src="https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tesla Cybertruck" class="news-image">
+                <div class="news-content">
+                    <h2 class="news-title">Tesla inicia producción masiva del Cybertruck con nuevas baterías 4680</h2>
+                    <p class="news-date">📅 30 de agosto, 2025</p>
+                    <p class="news-summary">
+                        Tesla ha comenzado la producción a gran escala del Cybertruck, incorporando las revolucionarias 
+                        baterías 4680 que ofrecen 500 millas de autonomía. El vehículo eléctrico incluye capacidades de 
+                        conducción autónoma de nivel 4 y un sistema de carga bidireccional que puede alimentar una casa completa.
+                    </p>
+                    <a href="https://tesla.com" class="news-source">🔗 Tesla Newsroom</a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 TechNews. Todas las noticias son ficticias y creadas con fines educativos.</p>
+    </footer>
 </body>
 </html>
